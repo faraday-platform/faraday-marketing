@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://faradaycapitalsystems.com/sitemap.xml

@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #08080f;
+  --color-foreground: #e8e8e8;
+  --color-heading: #ffffff;
+  --color-muted: #777777;
+  --color-subtle: #555555;
+  --color-dim: #444444;
+  --color-border: rgba(255, 255, 255, 0.04);
+  --color-border-hover: rgba(255, 255, 255, 0.06);
+  --color-card: rgba(255, 255, 255, 0.03);
+  --color-card-hover: rgba(255, 255, 255, 0.05);
+
+  --color-accent: #6366f1;
+  --color-accent-light: #818cf8;
+  --color-accent-lighter: #a78bfa;
+
+  --font-sans: "DM Sans", "Helvetica Neue", sans-serif;
+  --font-mono: "Space Mono", monospace;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes grid-pulse {
+  0%,
+  100% {
+    opacity: 0.03;
+  }
+  50% {
+    opacity: 0.06;
+  }
+}
+
+@keyframes node-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.4);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.7s ease-out forwards;
+  opacity: 0;
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+.delay-200 {
+  animation-delay: 0.2s;
+}
+.delay-350 {
+  animation-delay: 0.35s;
+}
+.delay-500 {
+  animation-delay: 0.5s;
+}
