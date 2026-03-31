@@ -10,11 +10,8 @@ export default function NotFound() {
       <p className="text-muted mb-8 max-w-md">
         The page you&apos;re looking for doesn&apos;t exist or has been moved.
       </p>
-      <Link
-        href="/"
-        className="text-sm font-semibold text-accent-light hover:text-accent-lighter transition-colors"
-      >
-        &larr; Back to Home
+      <Link href="/" className="text-sm font-semibold text-accent-light hover:text-accent-lighter transition-colors">
+        ← Back to Home
       </Link>
     </main>
   );
