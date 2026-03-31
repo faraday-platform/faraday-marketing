@@ -1,6 +1,10 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@100..1000&family=Space+Mono:wght@400;700&display=swap');
 
 @theme {
+  --font-sans: "DM Sans", "Helvetica Neue", sans-serif;
+  --font-mono: "Space Mono", monospace;
+
   --color-background: #08080f;
   --color-foreground: #e8e8e8;
   --color-heading: #ffffff;
@@ -15,9 +19,6 @@
   --color-accent: #6366f1;
   --color-accent-light: #818cf8;
   --color-accent-lighter: #a78bfa;
-
-  --font-sans: "DM Sans", "Helvetica Neue", sans-serif;
-  --font-mono: "Space Mono", monospace;
 }
 
 @keyframes fade-in-up {
@@ -32,39 +33,21 @@
 }
 
 @keyframes grid-pulse {
-  0%,
-  100% {
-    opacity: 0.03;
-  }
-  50% {
-    opacity: 0.06;
-  }
+  0%, 100% { opacity: 0.03; }
+  50% { opacity: 0.06; }
 }
 
 @keyframes node-glow {
-  0%,
-  100% {
-    box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(99, 102, 241, 0.4);
-  }
+  0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.2); }
+  50% { box-shadow: 0 0 40px rgba(99, 102, 241, 0.4); }
 }
 
 .animate-fade-in-up {
-  animation: fade-in-up 0.7s ease-out forwards;
   opacity: 0;
+  animation: fade-in-up 0.7s ease-out forwards;
 }
 
-.delay-100 {
-  animation-delay: 0.1s;
-}
-.delay-200 {
-  animation-delay: 0.2s;
-}
-.delay-350 {
-  animation-delay: 0.35s;
-}
-.delay-500 {
-  animation-delay: 0.5s;
-}
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-350 { animation-delay: 0.35s; }
+.delay-500 { animation-delay: 0.5s; }
