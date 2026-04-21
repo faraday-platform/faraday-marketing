@@ -16,44 +16,37 @@ export default function Hero() {
               className="w-1.5 h-1.5 rounded-full bg-accent-light"
               style={{ animation: "node-glow 3s infinite" }}
             />
-            AI-Powered Financial Infrastructure
+            AI-native governance for business operations
           </span>
         </div>
 
         {/* Title */}
-        <h1 className="animate-fade-in-up delay-100 text-[clamp(2.5rem,6vw,4.5rem)] font-bold leading-[1.05] tracking-[-0.04em] text-heading mb-7 max-w-[800px]">
-          Capital systems
-          <br />
+        <h1 className="animate-fade-in-up delay-100 text-[clamp(2.5rem,6vw,4.5rem)] font-bold leading-[1.05] tracking-[-0.04em] text-heading mb-7 max-w-[920px]">
+          Your business runs across dozens of systems.{" "}
           <span className="bg-gradient-to-br from-accent via-accent-lighter to-accent-light bg-clip-text text-transparent">
-            built for velocity.
+            Faraday makes sure they run right.
           </span>
         </h1>
 
         {/* Subtitle */}
-        <p className="animate-fade-in-up delay-200 text-[19px] leading-[1.65] text-muted max-w-[560px] mb-11">
+        <p className="animate-fade-in-up delay-200 text-[19px] leading-[1.65] text-muted max-w-[640px] mb-11">
           {SITE.description}
         </p>
 
         {/* Buttons */}
         <div className="animate-fade-in-up delay-350 flex flex-wrap gap-4">
           <a
-            href={SITE.platformUrl}
+            href={`mailto:${SITE.contactEmail}?subject=Faraday Demo Request`}
             className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-lg text-[15px] font-semibold bg-gradient-to-br from-accent to-accent-light text-white hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(99,102,241,0.35)] transition-all"
           >
-            Access Platform
+            Request a Demo
             <ArrowRight size={16} />
           </a>
           <a
-            href={SITE.foundryUrl}
+            href="#solutions"
             className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-lg text-[15px] font-semibold bg-white/5 text-[#ccc] border border-white/10 hover:bg-white/10 hover:border-white/20 hover:text-white transition-all"
           >
-            Open Foundry
-          </a>
-          <a
-            href="#capabilities"
-            className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-lg text-[15px] font-semibold bg-white/5 text-[#ccc] border border-white/10 hover:bg-white/10 hover:border-white/20 hover:text-white transition-all"
-          >
-            Learn More
+            See How It Works
           </a>
         </div>
       </div>

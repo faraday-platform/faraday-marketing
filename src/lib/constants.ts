@@ -1,58 +1,42 @@
 export const SITE = {
   name: "Faraday Capital Systems",
   description:
-    "AI-native platform for financial operations — connecting data pipelines, compliance automation, and intelligent decisioning into a single operational layer.",
+    "Faraday builds governed AI systems for the workflows that keep your business running — the work that moves between your tools, the decisions that need oversight, and the handoffs that break when systems don't talk to each other.",
+  tagline: "AI-native governance for business operations.",
   url: "https://faradaycapitalsystems.com",
   platformUrl: "https://platform.faradaycapitalsystems.com",
-  foundryUrl: "https://foundry.faradaycapitalsystems.com",
+  contactEmail: "info@faradaycapitalsystems.com",
 } as const;
 
 export const NAV_LINKS = [
-  { label: "Capabilities", href: "#capabilities" },
-  { label: "Architecture", href: "#architecture" },
+  { label: "Solutions", href: "#solutions" },
+  { label: "Products", href: "#products" },
+  { label: "Platform", href: "#platform" },
 ] as const;
 
-export const CAPABILITIES = [
+export const PRODUCTS = [
   {
-    label: "Foundry",
-    title: "Application Framework",
+    label: "FACP",
+    title: "Faraday Accounting Control Panel",
+    subtitle: "Governed accounting workflows",
     description:
-      "Build, test, and deploy financial applications with pre-built compliance guardrails and real-time data connectors.",
-    link: "https://foundry.faradaycapitalsystems.com",
-  },
-  {
-    label: "DataWeave",
-    title: "Data Pipeline Engine",
-    description:
-      "ETL and transformation pipelines designed for financial data — reconciliation, normalization, and enrichment at scale.",
+      "FACP sits on top of your ERP to automate controls, monitor transactions, and keep finance teams continuously audit-ready. The first Faraday application of governance to a workflow where accuracy and accountability are non-negotiable.",
     link: null,
   },
   {
-    label: "Gateway",
-    title: "API & Integration Layer",
+    label: "PSE",
+    title: "Payroll Synergy Experts",
+    subtitle: "Governed payroll operations",
     description:
-      "Unified API gateway for connecting internal systems, third-party providers, and regulatory reporting endpoints.",
-    link: null,
+      "PSE validates payroll across entities and jurisdictions — reducing errors, automating compliance checks, and keeping documentation audit-ready. Governance applied to one of the highest-stakes operational workflows in any business.",
+    link: "https://payrollsynergyexperts.com",
   },
   {
-    label: "Agents",
-    title: "AI Operations",
+    label: "Studio",
+    title: "Creative Intelligence",
+    subtitle: "Governed creative execution",
     description:
-      "Autonomous agents for compliance monitoring, anomaly detection, document processing, and operational intelligence.",
-    link: null,
-  },
-  {
-    label: "Runtime",
-    title: "Execution Environment",
-    description:
-      "Secure, sandboxed execution environment for financial computations with full audit trails and version control.",
-    link: null,
-  },
-  {
-    label: "Security",
-    title: "Trust & Compliance",
-    description:
-      "End-to-end encryption, role-based access, SOC 2 readiness tooling, and automated compliance evidence collection.",
+      "Studio is where strategy becomes visible. A governed AI environment for founders, operators, and brand teams to turn ideas into polished brand assets, product interfaces, and presentation materials — with the same discipline for consistency, reusability, and quality that Faraday brings to operational workflows.",
     link: null,
   },
 ] as const;
@@ -63,7 +47,7 @@ export const ARCHITECTURE_DIAGRAM = `┌─ EDGE (Cloudflare) ──────
 │                                                          │
 │  ┌─ COMPUTE ──────────┐   ┌─ AI LAYER ──────────────┐ │
 │  │  Gateway API        │   │  Agents (autonomous ops)  │ │
-│  │  Foundry Runtime    │   │  DataWeave (ETL + ML)     │ │
+│  │  Workflow Runtime   │   │  DataWeave (ETL + ML)     │ │
 │  │  Platform (Next.js) │   │  Security (compliance AI) │ │
 │  └────────┬────────────┘   └──────────┬────────────────┘ │
 │           │                           │                  │

@@ -1,24 +1,25 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Faraday Capital Systems — Governance Kernel | SR Holdings Platform",
+  title: "Faraday Capital Systems — AI-Native Governance for Business Operations",
   description:
-    "Faraday Capital Systems is the governance kernel and shared operating infrastructure of the SR Holdings platform. Policy enforcement, audit trails, agent governance, and execution environment for all SR Holdings operating tenants.",
+    "Faraday builds governed AI systems for the workflows that keep your business running — the work that moves between your tools, the decisions that need oversight, and the handoffs that break when systems don't talk to each other.",
   metadataBase: new URL("https://faradaycapitalsystems.com"),
   openGraph: {
-    title: "Faraday Capital Systems — Governance Kernel",
+    title: "Faraday Capital Systems — AI-Native Governance for Business Operations",
     description:
-      "Governance kernel and shared infrastructure for the SR Holdings platform. Every operating tenant — starting with Payroll Synergy Experts — runs on Faraday.",
+      "Faraday builds governed AI systems for the workflows that keep your business running — the work that moves between your tools, the decisions that need oversight, and the handoffs that break when systems don't talk to each other.",
     url: "https://faradaycapitalsystems.com",
     siteName: "Faraday Capital Systems",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "Faraday Capital Systems — Governance Kernel",
+    title: "Faraday Capital Systems — AI-Native Governance for Business Operations",
     description:
-      "Governance kernel and shared infrastructure for the SR Holdings platform.",
+      "Faraday builds governed AI systems for the workflows that keep your business running — the work that moves between your tools, the decisions that need oversight, and the handoffs that break when systems don't talk to each other.",
   },
   robots: { index: true, follow: true },
 };
@@ -40,29 +41,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Navbar */}
         <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-xl border-b border-border">
           <div className="max-w-[1200px] mx-auto px-6 sm:px-10 flex items-center justify-between h-16">
-            <a href="/" className="flex items-center gap-3">
+            <Link href="/" className="flex items-center gap-3">
               <div className="w-[34px] h-[34px] rounded-lg bg-gradient-to-br from-accent to-accent-light flex items-center justify-center text-white font-bold text-xs font-mono">
                 F
               </div>
               <span className="font-semibold text-[17px] text-heading tracking-tight">
                 Faraday Capital Systems
               </span>
-            </a>
+            </Link>
             <div className="hidden md:flex items-center gap-6">
-              <a href="#kernel" className="text-sm font-medium text-muted hover:text-foreground transition-colors">
-                Kernel
+              <a href="#solutions" className="text-sm font-medium text-muted hover:text-foreground transition-colors">
+                Solutions
               </a>
-              <a href="#architecture" className="text-sm font-medium text-muted hover:text-foreground transition-colors">
-                Architecture
+              <a href="#products" className="text-sm font-medium text-muted hover:text-foreground transition-colors">
+                Products
               </a>
-              <a href="https://srholdingsllc.com" className="text-sm font-medium text-muted hover:text-foreground transition-colors">
-                SR Holdings ↗
+              <a href="#platform" className="text-sm font-medium text-muted hover:text-foreground transition-colors">
+                Platform
               </a>
               <a
-                href="https://platform.faradaycapitalsystems.com"
+                href="mailto:info@faradaycapitalsystems.com"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-[13px] font-semibold bg-gradient-to-br from-accent to-accent-light text-white hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(99,102,241,0.35)] transition-all"
               >
-                Access Platform
+                Contact
               </a>
             </div>
             <button className="md:hidden text-muted hover:text-heading" aria-label="Toggle menu">
@@ -78,42 +79,49 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Footer */}
         <footer className="relative z-[1] px-6 sm:px-10 pt-12 pb-7 border-t border-border">
           <div className="max-w-[1200px] mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-12 mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr_1fr] gap-12 mb-10">
               <div>
                 <div className="flex items-center gap-2.5 mb-3">
                   <div className="w-7 h-7 rounded-md bg-gradient-to-br from-accent to-accent-light flex items-center justify-center text-white text-[10px] font-bold font-mono">F</div>
                   <span className="font-semibold text-[15px] text-heading">Faraday Capital Systems</span>
                 </div>
                 <p className="text-[13px] leading-[1.7] text-subtle max-w-[280px]">
-                  Governance kernel and shared operating infrastructure for the SR Holdings platform.
+                  AI-native governance for business operations.
                 </p>
+              </div>
+              <div>
+                <div className="font-mono text-xs font-semibold text-muted/80 tracking-[0.06em] uppercase mb-3.5">Products</div>
+                <div className="flex flex-col gap-2">
+                  <a href="#products" className="text-[13px] text-subtle hover:text-foreground transition-colors">FACP</a>
+                  <a href="https://payrollsynergyexperts.com" target="_blank" rel="noopener noreferrer" className="text-[13px] text-subtle hover:text-foreground transition-colors">PSE ↗</a>
+                  <a href="#products" className="text-[13px] text-subtle hover:text-foreground transition-colors">Studio</a>
+                </div>
               </div>
               <div>
                 <div className="font-mono text-xs font-semibold text-muted/80 tracking-[0.06em] uppercase mb-3.5">Platform</div>
                 <div className="flex flex-col gap-2">
                   <a href="https://platform.faradaycapitalsystems.com" className="text-[13px] text-subtle hover:text-foreground transition-colors">Dashboard</a>
-                  <a href="https://foundry.faradaycapitalsystems.com" className="text-[13px] text-subtle hover:text-foreground transition-colors">Foundry</a>
                 </div>
               </div>
               <div>
-                <div className="font-mono text-xs font-semibold text-muted/80 tracking-[0.06em] uppercase mb-3.5">SR Holdings</div>
+                <div className="font-mono text-xs font-semibold text-muted/80 tracking-[0.06em] uppercase mb-3.5">Company</div>
                 <div className="flex flex-col gap-2">
-                  <a href="https://srholdingsllc.com" className="text-[13px] text-subtle hover:text-foreground transition-colors">SR Holdings LLC ↗</a>
-                  <a href="https://srholdingsllc.com/structure" className="text-[13px] text-subtle hover:text-foreground transition-colors">Platform Structure</a>
-                  <a href="https://srholdingsllc.com/investors" className="text-[13px] text-subtle hover:text-foreground transition-colors">Investors</a>
-                </div>
-              </div>
-              <div>
-                <div className="font-mono text-xs font-semibold text-muted/80 tracking-[0.06em] uppercase mb-3.5">Tenants</div>
-                <div className="flex flex-col gap-2">
-                  <a href="https://payrollsynergyexperts.com" className="text-[13px] text-subtle hover:text-foreground transition-colors">PSE — Tenant One ↗</a>
+                  <a href="#" className="text-[13px] text-subtle hover:text-foreground transition-colors">About</a>
                   <a href="mailto:info@faradaycapitalsystems.com" className="text-[13px] text-subtle hover:text-foreground transition-colors">Contact</a>
+                </div>
+              </div>
+              <div>
+                <div className="font-mono text-xs font-semibold text-muted/80 tracking-[0.06em] uppercase mb-3.5">Legal</div>
+                <div className="flex flex-col gap-2">
+                  <a href="/privacy" className="text-[13px] text-subtle hover:text-foreground transition-colors">Privacy</a>
+                  <a href="/terms" className="text-[13px] text-subtle hover:text-foreground transition-colors">Terms</a>
+                  <a href="/security" className="text-[13px] text-subtle hover:text-foreground transition-colors">Security</a>
                 </div>
               </div>
             </div>
             <div className="border-t border-border pt-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-dim">
-              <span>© {new Date().getFullYear()} Faraday Capital Systems. Part of the SR Holdings platform.</span>
-              <a href="https://srholdingsllc.com" className="text-subtle hover:text-foreground transition-colors">srholdingsllc.com ↗</a>
+              <span>© {new Date().getFullYear()} Faraday Capital Systems. All rights reserved.</span>
+              <span className="text-subtle">AI-native governance for business operations.</span>
             </div>
           </div>
         </footer>
