@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { SITE, NAV_LINKS } from "@/lib/constants";
 
 export default function Navbar() {
@@ -32,10 +32,10 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href={SITE.platformUrl}
+            href={`mailto:${SITE.contactEmail}`}
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-[13px] font-semibold bg-gradient-to-br from-accent to-accent-light text-white hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(99,102,241,0.35)] transition-all"
           >
-            Access Platform
+            Contact
           </a>
         </div>
 
@@ -62,10 +62,10 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href={SITE.platformUrl}
+            href={`mailto:${SITE.contactEmail}`}
             className="mt-3 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-[13px] font-semibold bg-gradient-to-br from-accent to-accent-light text-white"
           >
-            Access Platform <ArrowRight size={14} />
+            Contact
           </a>
         </div>
       )}
