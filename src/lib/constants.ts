@@ -39,6 +39,14 @@ export const PRODUCTS = [
       "Studio is where strategy becomes visible. A governed AI environment for founders, operators, and brand teams to turn ideas into polished brand assets, product interfaces, and presentation materials — with the same discipline for consistency, reusability, and quality that Faraday brings to operational workflows.",
     link: null,
   },
+  {
+    label: "Beacon",
+    title: "Faraday Beacon",
+    subtitle: "Governed operational intelligence",
+    description:
+      "Currently engaged with design partners. Beacon is the governed intelligence layer for revenue, sales, and operations workflows — capturing signal across every system, validating integrity as it moves, and giving leadership trusted operational truth. Beacon applies Faraday's governance philosophy to the workflows that drive growth.",
+    link: null,
+  },
 ] as const;
 
 export const ARCHITECTURE_DIAGRAM = `┌─ EDGE (Cloudflare) ───────────────────────────────────────┐

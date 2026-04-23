@@ -5,12 +5,12 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Faraday Capital Systems — AI-Native Governance for Business Operations",
   description:
-    "Faraday builds governed AI systems for the workflows that keep your business running — the work that moves between your tools, the decisions that need oversight, and the handoffs that break when systems don't talk to each other.",
+    "Faraday builds governed AI systems for the workflows that keep your business running — accounting, payroll, creative execution, and revenue operations. Governance, validation, and audit-ready intelligence across every system you already use.",
   metadataBase: new URL("https://faradaycapitalsystems.com"),
   openGraph: {
     title: "Faraday Capital Systems — AI-Native Governance for Business Operations",
     description:
-      "Faraday builds governed AI systems for the workflows that keep your business running — the work that moves between your tools, the decisions that need oversight, and the handoffs that break when systems don't talk to each other.",
+      "Faraday builds governed AI systems for the workflows that keep your business running — accounting, payroll, creative execution, and revenue operations. Governance, validation, and audit-ready intelligence across every system you already use.",
     url: "https://faradaycapitalsystems.com",
     siteName: "Faraday Capital Systems",
     type: "website",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "Faraday Capital Systems — AI-Native Governance for Business Operations",
     description:
-      "Faraday builds governed AI systems for the workflows that keep your business running — the work that moves between your tools, the decisions that need oversight, and the handoffs that break when systems don't talk to each other.",
+      "Faraday builds governed AI systems for the workflows that keep your business running — accounting, payroll, creative execution, and revenue operations. Governance, validation, and audit-ready intelligence across every system you already use.",
   },
   robots: { index: true, follow: true },
 };
@@ -95,6 +95,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <a href="#products" className="text-[13px] text-subtle hover:text-foreground transition-colors">FACP</a>
                   <a href="https://payrollsynergyexperts.com" target="_blank" rel="noopener noreferrer" className="text-[13px] text-subtle hover:text-foreground transition-colors">PSE ↗</a>
                   <a href="#products" className="text-[13px] text-subtle hover:text-foreground transition-colors">Studio</a>
+                  <a href="#products" className="text-[13px] text-subtle hover:text-foreground transition-colors">Beacon</a>
                 </div>
               </div>
               <div>
