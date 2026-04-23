@@ -30,10 +30,10 @@ export default function FaradayPage() {
 
           <div className="animate-fade-in-up delay-350 flex flex-wrap gap-4">
             <a
-              href="mailto:info@faradaycapitalsystems.com?subject=Faraday Demo Request"
+              href="mailto:info@faradaycapitalsystems.com?subject=Faraday Waitlist Signup"
               className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-lg text-[15px] font-semibold bg-gradient-to-br from-accent to-accent-light text-white hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(99,102,241,0.35)] transition-all"
             >
-              Request a Demo
+              Join the Waitlist
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
               </svg>
@@ -235,18 +235,19 @@ export default function FaradayPage() {
       {/* ── CTA ───────────────────────────────────────────────────── */}
       <section className="relative z-[1] py-24 px-6 sm:px-10 text-center border-t border-border">
         <h2 className="text-[clamp(2rem,4vw,2.75rem)] font-bold tracking-[-0.03em] text-heading mb-5 max-w-[820px] mx-auto">
-          See what governed intelligence actually looks like.
+          Be first to see Faraday as each product opens.
         </h2>
         <p className="text-[17px] text-muted mb-9 max-w-[640px] mx-auto leading-relaxed">
-          30-minute demo. No slides. We&apos;ll walk you through FACP, PSE,
-          Studio, or Beacon live — on your stack, against your actual workflows.
+          Faraday products are rolling out as they&apos;re ready for real
+          workflows. Join the waitlist to get early access to FACP, PSE,
+          Studio, or Beacon — and hear first when design partner programs open.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
           <a
-            href="mailto:info@faradaycapitalsystems.com?subject=Faraday Demo Request"
+            href="mailto:info@faradaycapitalsystems.com?subject=Faraday Waitlist Signup"
             className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-lg text-[15px] font-semibold bg-gradient-to-br from-accent to-accent-light text-white hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(99,102,241,0.35)] transition-all"
           >
-            Request a Demo
+            Join the Waitlist
           </a>
           <a
             href="https://platform.faradaycapitalsystems.com"
