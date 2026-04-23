@@ -93,17 +93,19 @@ export default function FaradayPage() {
           <div className="mb-16">
             <div className="font-mono text-xs text-accent tracking-[0.1em] uppercase mb-4">Products</div>
             <h2 className="text-[clamp(2rem,4vw,2.75rem)] font-bold tracking-[-0.03em] text-heading max-w-[720px]">
-              Three expressions of the same philosophy.
+              Four expressions of the same philosophy.
             </h2>
             <p className="mt-5 text-[17px] text-muted max-w-[780px] leading-relaxed">
               Faraday products share a common belief: AI should make business
               systems more reliable, more accurate, and more governable — not
-              more complex. Today that belief shows up in three places. Tomorrow
-              it extends across every workflow where the cost of error is high.
+              more complex. That belief now shows up across four domains —
+              accounting, payroll, creative execution, and revenue operations —
+              with more to come as we extend into every workflow where the cost
+              of error is high.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
               {
                 id: "FACP",
@@ -124,6 +126,13 @@ export default function FaradayPage() {
                 title: "Creative Intelligence",
                 subtitle: "Governed creative execution",
                 desc: "Studio is where strategy becomes visible. A governed AI environment for founders, operators, and brand teams to turn ideas into polished brand assets, product interfaces, and presentation materials — with the same discipline for consistency, reusability, and quality that Faraday brings to operational workflows.",
+                link: null,
+              },
+              {
+                id: "Beacon",
+                title: "Faraday Beacon",
+                subtitle: "Governed operational intelligence",
+                desc: "Currently engaged with design partners. Beacon is the governed intelligence layer for revenue, sales, and operations workflows — capturing signal across every system, validating integrity as it moves, and giving leadership trusted operational truth. Beacon applies Faraday's governance philosophy to the workflows that drive growth.",
                 link: null,
               },
             ].map((product) => (
@@ -182,11 +191,11 @@ export default function FaradayPage() {
 
           <p className="text-[17px] text-muted leading-relaxed mb-6">
             Faraday&apos;s work today is grounded in workflows where the cost of
-            error is highest — accounting, payroll, and the creative execution
-            that shapes how a business shows up in the world. But the pattern is
-            the same everywhere: as AI takes on more decisions, more actions,
-            and more execution across every function of the business, the
-            hardest problem stops being capability and becomes oversight.
+            error is highest — accounting, payroll, creative execution, and the
+            revenue and operational workflows that drive growth. But the
+            pattern is the same everywhere: as AI takes on more decisions, more
+            actions, and more execution across every function of the business,
+            the hardest problem stops being capability and becomes oversight.
           </p>
 
           <p className="text-[17px] text-muted leading-relaxed mb-12">
@@ -229,8 +238,8 @@ export default function FaradayPage() {
           See what governed intelligence actually looks like.
         </h2>
         <p className="text-[17px] text-muted mb-9 max-w-[640px] mx-auto leading-relaxed">
-          30-minute demo. No slides. We&apos;ll walk you through FACP, PSE, or
-          Studio live — on your stack, against your actual workflows.
+          30-minute demo. No slides. We&apos;ll walk you through FACP, PSE,
+          Studio, or Beacon live — on your stack, against your actual workflows.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
           <a
