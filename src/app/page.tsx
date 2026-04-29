@@ -22,10 +22,9 @@ export default function FaradayPage() {
           </h1>
 
           <p className="animate-fade-in-up delay-200 text-[19px] leading-[1.65] text-muted max-w-[640px] mb-11">
-            Faraday builds governed AI systems for the workflows that keep your
-            business running — the work that moves between your tools, the
-            decisions that need oversight, and the handoffs that break when
-            systems don&apos;t talk to each other.
+            Faraday verifies, governs, and controls the outputs of the systems
+            you already run — payroll, finance, and operations — before errors
+            become real problems.
           </p>
 
           <div className="animate-fade-in-up delay-350 flex flex-wrap gap-4">
@@ -74,7 +73,7 @@ export default function FaradayPage() {
                 desc: "As AI takes on more actions across your stack — summarizing, routing, approving, generating — the oversight problem grows faster than the capability. Faraday gives you the controls, validation, and audit trails to trust what your AI systems are doing.",
               },
               {
-                title: "Replace the work that shouldn't be manual",
+                title: "Govern the work that shouldn't be manual",
                 desc: "Spreadsheets tracking reconciliation. Email chains approving exceptions. Tribal knowledge managing handoffs. Faraday automates the governance work that currently runs on patience and vigilance — across whichever function owns it.",
               },
             ].map((card) => (
@@ -92,6 +91,10 @@ export default function FaradayPage() {
         <div className="max-w-[1200px] mx-auto">
           <div className="mb-16">
             <div className="font-mono text-xs text-accent tracking-[0.1em] uppercase mb-4">Products</div>
+            <p className="text-[15px] text-subtle leading-relaxed max-w-[780px] mb-5">
+              Faraday sits above execution. These products run independently
+              and send their outputs up for governance.
+            </p>
             <h2 className="text-[clamp(2rem,4vw,2.75rem)] font-bold tracking-[-0.03em] text-heading max-w-[720px]">
               Four expressions of the same philosophy.
             </h2>
@@ -112,6 +115,7 @@ export default function FaradayPage() {
                 title: "Faraday Accounting Control Panel",
                 subtitle: "Governed accounting workflows",
                 desc: "FACP sits on top of your ERP to automate controls, monitor transactions, and keep finance teams continuously audit-ready. The first Faraday application of governance to a workflow where accuracy and accountability are non-negotiable.",
+                relationship: "→ Outputs governed by Faraday for accuracy and completeness before close.",
                 link: null as { label: string; href: string } | null,
               },
               {
@@ -119,13 +123,15 @@ export default function FaradayPage() {
                 title: "Payroll Synergy Experts",
                 subtitle: "Governed payroll operations",
                 desc: "PSE validates payroll across entities and jurisdictions — reducing errors, automating compliance checks, and keeping documentation audit-ready. Governance applied to one of the highest-stakes operational workflows in any business.",
+                relationship: "→ Outputs governed by Faraday before payroll is finalized.",
                 link: { label: "Visit payrollsynergyexperts.com →", href: "https://payrollsynergyexperts.com" },
               },
               {
                 id: "Studio",
                 title: "Creative Intelligence",
                 subtitle: "Governed creative execution",
-                desc: "Studio is where strategy becomes visible. A governed AI environment for founders, operators, and brand teams to turn ideas into polished brand assets, product interfaces, and presentation materials — with the same discipline for consistency, reusability, and quality that Faraday brings to operational workflows.",
+                desc: "Studio is where founders and operators produce brand-quality assets — decks, interfaces, content, campaigns — without a creative team. Faraday governance applies to how assets get made: brand standards, approval workflows, version control, and reusability across the business.",
+                relationship: "→ Faraday governs the rules. Studio executes against them.",
                 link: null,
               },
               {
@@ -133,6 +139,7 @@ export default function FaradayPage() {
                 title: "Faraday Beacon",
                 subtitle: "Governed operational intelligence",
                 desc: "Currently engaged with design partners. Beacon is the governed intelligence layer for revenue, sales, and operations workflows — capturing signal across every system, validating integrity as it moves, and giving leadership trusted operational truth. Beacon applies Faraday's governance philosophy to the workflows that drive growth.",
+                relationship: "→ Signals governed by Faraday for action and escalation.",
                 link: null,
               },
             ].map((product) => (
@@ -140,7 +147,8 @@ export default function FaradayPage() {
                 <div className="font-mono text-[11px] text-accent tracking-[0.08em] uppercase mb-3">{product.id}</div>
                 <h3 className="text-xl font-semibold text-heading tracking-tight mb-1.5 leading-snug">{product.title}</h3>
                 <p className="font-mono text-[12px] text-subtle tracking-wide mb-4">{product.subtitle}</p>
-                <p className="text-sm leading-[1.7] text-muted mb-5">{product.desc}</p>
+                <p className="text-sm leading-[1.7] text-muted mb-3">{product.desc}</p>
+                <p className="text-[13px] italic leading-[1.6] text-subtle mb-5">{product.relationship}</p>
                 {product.link && (
                   <a
                     href={product.link.href}
@@ -229,6 +237,22 @@ export default function FaradayPage() {
             broader: helping businesses use AI in a practical, governed way
             across every workflow that keeps the company running.
           </p>
+        </div>
+      </section>
+
+      {/* ── ANCHOR ────────────────────────────────────────────────── */}
+      <section className="relative z-[1] py-28 px-6 sm:px-10 text-center border-t border-border">
+        <div className="max-w-[1100px] mx-auto">
+          <h2 className="text-[clamp(2.5rem,6vw,4.5rem)] font-bold leading-[1.1] tracking-[-0.04em]">
+            <span className="text-heading">
+              Faraday doesn&apos;t run your systems.
+            </span>
+            <br />
+            <span className="bg-gradient-to-br from-accent via-accent-lighter to-accent-light bg-clip-text text-transparent">
+              It makes sure they&apos;re running correctly — and stops them
+              when they&apos;re not.
+            </span>
+          </h2>
         </div>
       </section>
 
