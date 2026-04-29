@@ -243,7 +243,7 @@ export default function FaradayPage() {
       {/* ── ANCHOR ────────────────────────────────────────────────── */}
       <section className="relative z-[1] py-28 px-6 sm:px-10 text-center border-t border-border">
         <div className="max-w-[1100px] mx-auto">
-          <h2 className="text-[clamp(2.5rem,6vw,4.5rem)] font-bold leading-[1.1] tracking-[-0.04em]">
+          <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-[1.1] tracking-[-0.04em]">
             <span className="text-heading">
               Faraday doesn&apos;t run your systems.
             </span>
