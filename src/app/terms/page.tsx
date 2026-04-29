@@ -45,7 +45,7 @@ export default function TermsPage() {
         <p className="text-[17px] text-muted leading-relaxed mb-6">
           Faraday provides AI-powered governance and workflow systems for
           business operations. Specific products include FACP (Faraday
-          Accounting Control Panel), PSE (Payroll Synergy Experts), and
+          Accounting Control Plane), PSE (Payroll Synergy Experts), and
           Studio. Features and availability may change without notice.
         </p>
 

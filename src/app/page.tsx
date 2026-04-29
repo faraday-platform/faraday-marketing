@@ -112,7 +112,7 @@ export default function FaradayPage() {
             {[
               {
                 id: "FACP",
-                title: "Faraday Accounting Control Panel",
+                title: "Faraday Accounting Control Plane",
                 subtitle: "Governed accounting workflows",
                 desc: "FACP sits on top of your ERP to automate controls, monitor transactions, and keep finance teams continuously audit-ready. The first Faraday application of governance to a workflow where accuracy and accountability are non-negotiable.",
                 relationship: "→ Outputs governed by Faraday for accuracy and completeness before close.",
@@ -137,8 +137,8 @@ export default function FaradayPage() {
               {
                 id: "Beacon",
                 title: "Faraday Beacon",
-                subtitle: "Governed operational intelligence",
-                desc: "Currently engaged with design partners. Beacon is the governed intelligence layer for revenue, sales, and operations workflows — capturing signal across every system, validating integrity as it moves, and giving leadership trusted operational truth. Beacon applies Faraday's governance philosophy to the workflows that drive growth.",
+                subtitle: "Governed operational observation",
+                desc: "Currently engaged with design partners. Beacon is the pre-system observation layer for operations and growth workflows — detecting when operational reality starts to drift before it's been recorded anywhere. Non-authoritative by design. Beacon surfaces signals; the people with context decide what they mean.",
                 relationship: "→ Signals governed by Faraday for action and escalation.",
                 link: null,
               },
