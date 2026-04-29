@@ -17,7 +17,7 @@ export const NAV_LINKS = [
 export const PRODUCTS = [
   {
     label: "FACP",
-    title: "Faraday Accounting Control Panel",
+    title: "Faraday Accounting Control Plane",
     subtitle: "Governed accounting workflows",
     description:
       "FACP sits on top of your ERP to automate controls, monitor transactions, and keep finance teams continuously audit-ready. The first Faraday application of governance to a workflow where accuracy and accountability are non-negotiable.",
