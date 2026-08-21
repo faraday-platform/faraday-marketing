@@ -58,7 +58,7 @@ export default function FaradayPage() {
               handoffs, decisions, data that has to stay consistent — is where
               errors hide, where compliance slips, and where teams burn hours on
               manual work. Faraday is the intelligence and governance layer that
-              watches, validates, and controls that work in real time.
+              evaluates and records that work against governed policy.
             </p>
           </div>
 
@@ -66,7 +66,7 @@ export default function FaradayPage() {
             {[
               {
                 title: "Keep work moving accurately between systems",
-                desc: "Every business-critical workflow crosses multiple tools — pipeline updates, customer handoffs, financial transactions, operational approvals. Faraday monitors the work as it moves, catches inconsistencies as they happen, and keeps every system aligned.",
+                desc: "Every business-critical workflow crosses multiple tools — pipeline updates, customer handoffs, financial transactions, operational approvals. Faraday monitors the work as it moves, catches inconsistencies as they happen, and records what was decided and under which authority.",
               },
               {
                 title: "Govern AI-assisted decisions, not just manual ones",
@@ -74,7 +74,7 @@ export default function FaradayPage() {
               },
               {
                 title: "Govern the work that shouldn't be manual",
-                desc: "Spreadsheets tracking reconciliation. Email chains approving exceptions. Tribal knowledge managing handoffs. Faraday automates the governance work that currently runs on patience and vigilance — across whichever function owns it.",
+                desc: "Spreadsheets tracking reconciliation. Email chains approving exceptions. Tribal knowledge managing handoffs. Faraday makes explicit the governance work that currently runs on patience and vigilance — across whichever function owns it.",
               },
             ].map((card) => (
               <div key={card.title} className="bg-card border border-border-hover rounded-2xl px-7 py-9 hover:bg-card-hover hover:border-accent/30 hover:-translate-y-0.5 transition-all duration-300">
@@ -181,10 +181,9 @@ export default function FaradayPage() {
           </div>
 
           <p className="text-[15px] text-muted leading-relaxed text-center">
-            Workflow orchestration across ERP, HRIS, CRM, and operational
-            systems · AI-driven automation and decision support · Role-based
-            access and governance · Full audit trails · End-to-end encryption ·
-            SOC 2 readiness tooling
+            Policy evaluation and decision support · Identity and role-based
+            authority · Full audit trails · Encryption in transit and at rest ·
+            Controls that support audit readiness
           </p>
         </div>
       </section>
