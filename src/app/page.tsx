@@ -29,7 +29,7 @@ export default function FaradayPage() {
 
           <div className="animate-fade-in-up delay-350 flex flex-wrap gap-4">
             <a
-              href="mailto:info@faradaycapitalsystems.com?subject=Faraday Waitlist Signup"
+              href="/waitlist"
               className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-lg text-[15px] font-semibold bg-gradient-to-br from-accent to-accent-light text-white hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(99,102,241,0.35)] transition-all"
             >
               Join the Waitlist
@@ -267,7 +267,7 @@ export default function FaradayPage() {
         </p>
         <div className="flex justify-center">
           <a
-            href="mailto:info@faradaycapitalsystems.com?subject=Faraday Waitlist Signup"
+            href="/waitlist"
             className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-lg text-[15px] font-semibold bg-gradient-to-br from-accent to-accent-light text-white hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(99,102,241,0.35)] transition-all"
           >
             Join the Waitlist
