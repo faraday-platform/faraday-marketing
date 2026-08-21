@@ -4,7 +4,6 @@ export const SITE = {
     "Faraday builds governed AI systems for the workflows that keep your business running — the work that moves between your tools, the decisions that need oversight, and the handoffs that break when systems don't talk to each other.",
   tagline: "AI-native governance for business operations.",
   url: "https://faradaycapitalsystems.com",
-  platformUrl: "https://platform.faradaycapitalsystems.com",
   contactEmail: "info@faradaycapitalsystems.com",
 } as const;
 

@@ -79,7 +79,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Footer */}
         <footer className="relative z-[1] px-6 sm:px-10 pt-12 pb-7 border-t border-border">
           <div className="max-w-[1200px] mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr_1fr] gap-12 mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-12 mb-10">
               <div>
                 <div className="flex items-center gap-2.5 mb-3">
                   <div className="w-7 h-7 rounded-md bg-gradient-to-br from-accent to-accent-light flex items-center justify-center text-white text-[10px] font-bold font-mono">F</div>
@@ -99,15 +99,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </div>
               </div>
               <div>
-                <div className="font-mono text-xs font-semibold text-muted/80 tracking-[0.06em] uppercase mb-3.5">Platform</div>
-                <div className="flex flex-col gap-2">
-                  <a href="https://platform.faradaycapitalsystems.com" className="text-[13px] text-subtle hover:text-foreground transition-colors">Dashboard</a>
-                </div>
-              </div>
-              <div>
                 <div className="font-mono text-xs font-semibold text-muted/80 tracking-[0.06em] uppercase mb-3.5">Company</div>
                 <div className="flex flex-col gap-2">
-                  <a href="#" className="text-[13px] text-subtle hover:text-foreground transition-colors">About</a>
                   <a href="mailto:info@faradaycapitalsystems.com" className="text-[13px] text-subtle hover:text-foreground transition-colors">Contact</a>
                 </div>
               </div>

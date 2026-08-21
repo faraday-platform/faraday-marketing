@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="relative z-[1] px-6 sm:px-10 pt-12 pb-7 border-t border-border">
       <div className="max-w-[1200px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr_1fr] gap-12 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-12 mb-10">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5 mb-3">
@@ -32,28 +32,12 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Platform */}
-          <div>
-            <div className="font-mono text-xs font-semibold text-muted/80 tracking-[0.06em] uppercase mb-3.5">
-              Platform
-            </div>
-            <div className="flex flex-col gap-2">
-              <a
-                href={SITE.platformUrl}
-                className="text-[13px] text-subtle hover:text-foreground transition-colors"
-              >
-                Dashboard
-              </a>
-            </div>
-          </div>
-
           {/* Company */}
           <div>
             <div className="font-mono text-xs font-semibold text-muted/80 tracking-[0.06em] uppercase mb-3.5">
               Company
             </div>
             <div className="flex flex-col gap-2">
-              <a href="#" className="text-[13px] text-subtle hover:text-foreground transition-colors">About</a>
               <a
                 href={`mailto:${SITE.contactEmail}`}
                 className="text-[13px] text-subtle hover:text-foreground transition-colors"
