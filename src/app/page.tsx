@@ -266,18 +266,12 @@ export default function FaradayPage() {
           workflows. Join the waitlist to get early access to FACP, PSE,
           Studio, or Beacon — and hear first when design partner programs open.
         </p>
-        <div className="flex flex-wrap gap-4 justify-center">
+        <div className="flex justify-center">
           <a
             href="mailto:info@faradaycapitalsystems.com?subject=Faraday Waitlist Signup"
             className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-lg text-[15px] font-semibold bg-gradient-to-br from-accent to-accent-light text-white hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(99,102,241,0.35)] transition-all"
           >
             Join the Waitlist
-          </a>
-          <a
-            href="https://platform.faradaycapitalsystems.com"
-            className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-lg text-[15px] font-semibold bg-white/5 text-[#ccc] border border-white/10 hover:bg-white/10 hover:border-white/20 hover:text-white transition-all"
-          >
-            Access Platform
           </a>
         </div>
       </section>
