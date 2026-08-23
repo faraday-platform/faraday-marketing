@@ -3,23 +3,23 @@ import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Faraday Capital Systems — AI-Native Governance for Business Operations",
+  title: "Faraday Capital Systems — The control plane for governed AI and business systems",
   description:
-    "Faraday builds governed AI systems for the workflows that keep your business running — accounting, payroll, creative execution, and revenue operations. Governance, validation, and audit-ready intelligence across every system you already use.",
+    "Faraday defines the authority boundaries for your AI and business systems, evaluates decisions against governed policy, and preserves the evidence. Accounting, payroll, creative execution, and revenue operations.",
   metadataBase: new URL("https://faradaycapitalsystems.com"),
   openGraph: {
-    title: "Faraday Capital Systems — AI-Native Governance for Business Operations",
+    title: "Faraday Capital Systems — The control plane for governed AI and business systems",
     description:
-      "Faraday builds governed AI systems for the workflows that keep your business running — accounting, payroll, creative execution, and revenue operations. Governance, validation, and audit-ready intelligence across every system you already use.",
+      "Faraday defines the authority boundaries for your AI and business systems, evaluates decisions against governed policy, and preserves the evidence. Accounting, payroll, creative execution, and revenue operations.",
     url: "https://faradaycapitalsystems.com",
     siteName: "Faraday Capital Systems",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "Faraday Capital Systems — AI-Native Governance for Business Operations",
+    title: "Faraday Capital Systems — The control plane for governed AI and business systems",
     description:
-      "Faraday builds governed AI systems for the workflows that keep your business running — accounting, payroll, creative execution, and revenue operations. Governance, validation, and audit-ready intelligence across every system you already use.",
+      "Faraday defines the authority boundaries for your AI and business systems, evaluates decisions against governed policy, and preserves the evidence. Accounting, payroll, creative execution, and revenue operations.",
   },
   robots: { index: true, follow: true },
 };
@@ -86,7 +86,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <span className="font-semibold text-[15px] text-heading">Faraday Capital Systems</span>
                 </div>
                 <p className="text-[13px] leading-[1.7] text-subtle max-w-[280px]">
-                  AI-native governance for business operations.
+                  The control plane for governed AI and business systems.
                 </p>
               </div>
               <div>
@@ -115,7 +115,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
             <div className="border-t border-border pt-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-dim">
               <span>© {new Date().getFullYear()} Faraday Capital Systems. All rights reserved.</span>
-              <span className="text-subtle">AI-native governance for business operations.</span>
+              <span className="text-subtle">The control plane for governed AI and business systems.</span>
             </div>
           </div>
         </footer>
