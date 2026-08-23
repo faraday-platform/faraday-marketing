@@ -221,40 +221,6 @@ export default function FaradayPage() {
         </div>
       </section>
 
-      {/* ── FOUNDER ───────────────────────────────────────────────── */}
-      <section className="relative z-[1] py-28 px-6 sm:px-10 border-t border-border">
-        <div className="max-w-[900px] mx-auto">
-          <div className="font-mono text-xs text-accent tracking-[0.1em] uppercase mb-4">Founder</div>
-          <h2 className="text-[clamp(2rem,4vw,2.75rem)] font-bold tracking-[-0.03em] text-heading mb-8 max-w-[780px]">
-            Built by operators who&apos;ve lived inside the workflows that matter.
-          </h2>
-          <p className="text-[17px] text-muted leading-relaxed">
-            Faraday was built by operators who know what happens when critical
-            workflows break across disconnected systems — because we&apos;ve been
-            on the other side of those breakdowns. Our first products are shaped
-            in accounting, payroll, and creative execution, but the mission is
-            broader: helping businesses use AI in a practical, governed way
-            across every workflow that keeps the company running.
-          </p>
-        </div>
-      </section>
-
-      {/* ── ANCHOR ────────────────────────────────────────────────── */}
-      <section className="relative z-[1] py-28 px-6 sm:px-10 text-center border-t border-border">
-        <div className="max-w-[1100px] mx-auto">
-          <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-[1.1] tracking-[-0.04em]">
-            <span className="text-heading">
-              Faraday doesn&apos;t run your systems.
-            </span>
-            <br />
-            <span className="bg-gradient-to-br from-accent via-accent-lighter to-accent-light bg-clip-text text-transparent">
-              It makes sure they&apos;re running correctly — and stops them
-              when they&apos;re not.
-            </span>
-          </h2>
-        </div>
-      </section>
-
       {/* ── CTA ───────────────────────────────────────────────────── */}
       <section className="relative z-[1] py-24 px-6 sm:px-10 text-center border-t border-border">
         <h2 className="text-[clamp(2rem,4vw,2.75rem)] font-bold tracking-[-0.03em] text-heading mb-5 max-w-[820px] mx-auto">
