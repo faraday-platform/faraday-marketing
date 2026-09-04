@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 
+const INVESTOR_INTEREST_URL =
+  "https://www.srholdingsllc.com/investors?venture=faraday&source=faraday-marketing#investor-form";
+
 export const metadata: Metadata = {
   title: "Faraday Capital Systems — The control plane for governed AI and business systems",
   description:
@@ -28,7 +31,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className="bg-background text-foreground font-sans antialiased overflow-x-hidden">
-        {/* Animated grid background */}
         <div
           className="fixed inset-0 pointer-events-none z-0"
           style={{
@@ -38,7 +40,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
 
-        {/* Navbar */}
         <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-xl border-b border-border">
           <div className="max-w-[1200px] mx-auto px-6 sm:px-10 flex items-center justify-between h-16">
             <Link href="/" className="flex items-center gap-3">
@@ -60,6 +61,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 Platform
               </a>
               <a
+                href={INVESTOR_INTEREST_URL}
+                className="text-sm font-medium text-accent-light hover:text-white transition-colors"
+              >
+                Investor Interest
+              </a>
+              <a
                 href="mailto:info@faradaycapitalsystems.com"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-[13px] font-semibold bg-gradient-to-br from-accent to-accent-light text-white hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(99,102,241,0.35)] transition-all"
               >
@@ -76,7 +83,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {children}
 
-        {/* Footer */}
         <footer className="relative z-[1] px-6 sm:px-10 pt-12 pb-7 border-t border-border">
           <div className="max-w-[1200px] mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-12 mb-10">
@@ -101,6 +107,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div>
                 <div className="font-mono text-xs font-semibold text-muted/80 tracking-[0.06em] uppercase mb-3.5">Company</div>
                 <div className="flex flex-col gap-2">
+                  <a href={INVESTOR_INTEREST_URL} className="text-[13px] text-subtle hover:text-foreground transition-colors">Investor Interest</a>
                   <a href="mailto:info@faradaycapitalsystems.com" className="text-[13px] text-subtle hover:text-foreground transition-colors">Contact</a>
                 </div>
               </div>
