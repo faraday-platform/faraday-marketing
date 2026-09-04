@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main, "feat/**"]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Validate Capital Access manifest
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const m = JSON.parse(fs.readFileSync('.faraday/marketing-surface.json', 'utf8'));
+          const expected = 'https://www.srholdingsllc.com/investors';
+          if (m.schema_version !== '1.0') throw new Error('invalid schema_version');
+          if (m.venture_id !== 'faraday') throw new Error('invalid venture_id');
+          if (m.surface_type !== 'marketing') throw new Error('invalid surface_type');
+          if (m.capital_access?.status !== 'enabled') throw new Error('capital access not enabled');
+          if (m.capital_access?.canonical_intake_url !== expected) throw new Error('canonical intake URL drift');
+          if (m.capital_access?.source_site !== 'faraday-marketing') throw new Error('source_site drift');
+          NODE
+      - run: npm run lint
+      - run: npm run build
