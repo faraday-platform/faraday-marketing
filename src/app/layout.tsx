@@ -8,12 +8,12 @@ const INVESTOR_INTEREST_URL =
 export const metadata: Metadata = {
   title: "Faraday Capital Systems — The control plane for governed AI and business systems",
   description:
-    "Faraday defines the authority boundaries for your AI and business systems, evaluates decisions against governed policy, and preserves the evidence. Accounting, payroll, creative execution, and revenue operations.",
+    "As AI capability accelerates, operational trust becomes the constraint. Faraday makes authority boundaries explicit, evaluates governed decisions, and preserves the evidence.",
   metadataBase: new URL("https://faradaycapitalsystems.com"),
   openGraph: {
     title: "Faraday Capital Systems — The control plane for governed AI and business systems",
     description:
-      "Faraday defines the authority boundaries for your AI and business systems, evaluates decisions against governed policy, and preserves the evidence. Accounting, payroll, creative execution, and revenue operations.",
+      "As AI capability accelerates, operational trust becomes the constraint. Faraday makes authority boundaries explicit, evaluates governed decisions, and preserves the evidence.",
     url: "https://faradaycapitalsystems.com",
     siteName: "Faraday Capital Systems",
     type: "website",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Faraday Capital Systems — The control plane for governed AI and business systems",
     description:
-      "Faraday defines the authority boundaries for your AI and business systems, evaluates decisions against governed policy, and preserves the evidence. Accounting, payroll, creative execution, and revenue operations.",
+      "As AI capability accelerates, operational trust becomes the constraint. Faraday makes authority boundaries explicit, evaluates governed decisions, and preserves the evidence.",
   },
   robots: { index: true, follow: true },
 };
