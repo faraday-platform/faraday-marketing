@@ -18,10 +18,12 @@ export default function FaradayPage() {
             Your systems can act faster than you can supervise them.
           </h1>
 
-          <p className="animate-fade-in-up delay-200 text-[19px] leading-[1.65] text-muted max-w-[640px] mb-7">
-            Faraday defines the authority boundaries for AI and business systems,
-            evaluates decisions against governed policy, and preserves the
-            evidence of what was decided and why.
+          <p className="animate-fade-in-up delay-200 text-[19px] leading-[1.65] text-muted max-w-[700px] mb-7">
+            AI capability is no longer the only constraint. The harder question
+            is what businesses are willing to let AI and automated systems decide
+            — under what authority, with what evidence, and when a human needs to
+            stay in the loop. Faraday provides the governance infrastructure for
+            that boundary.
           </p>
 
           <p className="animate-fade-in-up delay-200 text-[19px] font-semibold tracking-[-0.01em] mb-11 bg-gradient-to-br from-accent via-accent-lighter to-accent-light bg-clip-text text-transparent">
@@ -51,15 +53,14 @@ export default function FaradayPage() {
           <div className="mb-16">
             <div className="font-mono text-xs text-accent tracking-[0.1em] uppercase mb-4">What We Solve</div>
             <h2 className="text-[clamp(2rem,4vw,2.75rem)] font-bold tracking-[-0.03em] text-heading max-w-[820px]">
-              The problem isn&apos;t more tools. It&apos;s who decided, and whether they were allowed to.
+              The AI adoption bottleneck is shifting from capability to operational trust.
             </h2>
             <p className="mt-5 text-[17px] text-muted max-w-[780px] leading-relaxed">
-              Every business runs on a stack of systems that weren&apos;t designed
-              to talk to each other — and increasingly, on models and automation
-              that can produce consequential decisions inside them. Access gets
-              provisioned. Capability gets deployed. Authority gets assumed.
-              Faraday is the governance layer that makes authority explicit and
-              every governed decision reviewable.
+              Businesses increasingly have access to AI capable of meaningful
+              work. The harder problem is everything around the model — context,
+              permissions, governance, verification, auditability, and knowing
+              when a human needs to stay in the loop. Faraday makes those
+              authority boundaries explicit and governed decisions reviewable.
             </p>
           </div>
 
@@ -210,10 +211,10 @@ export default function FaradayPage() {
           <p className="text-[17px] text-muted leading-relaxed mb-12">
             Faraday&apos;s work today is grounded in workflows where the cost of
             error is highest — accounting, payroll, creative execution, and the
-            revenue and operational workflows that drive growth. The pattern is
-            the same everywhere: as software and AI take on more decisions across
-            every function, the hardest problem stops being capability and
-            becomes authority.
+            revenue and operational workflows that drive growth. As software and
+            AI take on more consequential work, the question shifts from what
+            systems can do to what organizations are willing to authorize them to
+            do. Faraday exists at that boundary.
           </p>
 
           <blockquote className="border-l-2 border-accent pl-8 py-4 my-4">
