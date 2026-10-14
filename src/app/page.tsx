@@ -128,7 +128,7 @@ export default function FaradayPage() {
                 subtitle: "Governed creative execution.",
                 desc: "Studio is where operators produce brand-quality assets — decks, interfaces, content, campaigns — under defined brand standards, approval workflows, and version control.",
                 relationship: "→ Faraday governs the rules. Studio executes against them.",
-                link: null,
+                link: { label: "studio.faradaycapitalsystems.com →", href: "https://studio.faradaycapitalsystems.com" },
               },
               {
                 id: "Beacon",
