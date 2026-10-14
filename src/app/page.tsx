@@ -161,6 +161,43 @@ export default function FaradayPage() {
         </div>
       </section>
 
+      {/* ── CURATED PROJECTS: PUBLIC SITES ONLY ──────────────────── */}
+      <section id="projects" aria-labelledby="projects-heading" className="relative z-[1] py-24 px-6 sm:px-10 border-t border-border scroll-mt-20">
+        <div className="max-w-[1200px] mx-auto">
+          <p className="font-mono text-xs text-accent tracking-widest uppercase mb-4">Beyond our four core products</p>
+          <h2 id="projects-heading" className="text-[clamp(2rem,4vw,2.75rem)] font-bold text-heading mb-5">Projects</h2>
+          <p className="text-[17px] text-[#b8b8c7] max-w-[760px] leading-relaxed mb-8">Explore additional initiatives from the Faraday ecosystem. Projects are distinct from FACP, Studio, Beacon, and PSE.</p>
+          <a href="https://musicbox.faradaycapitalsystems.com" target="_blank" rel="noopener noreferrer" className="block max-w-xl rounded-2xl border border-white/15 bg-card p-7 hover:border-accent-light focus-visible:outline-2 focus-visible:outline-accent-light">
+            <span className="font-mono text-xs text-accent-light">CREATIVE PROJECT</span>
+            <h3 className="text-xl font-semibold text-white mt-3 mb-2">Music Box ↗</h3>
+            <p className="text-sm text-[#b8b8c7] leading-relaxed">Explore the creative journey behind music, lyrics, and artist-directed experiences.</p>
+          </a>
+        </div>
+      </section>
+
+      {/* ── MOTION CONCEPT: NO VIDEO ASSET / NO PRODUCT CLAIM ────── */}
+      <section aria-labelledby="motion-heading" className="relative z-[1] py-24 px-6 sm:px-10 border-t border-border">
+        <div className="max-w-[1100px] mx-auto grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <p className="font-mono text-xs text-accent tracking-widest uppercase mb-4">Visual concept · preview</p>
+            <h2 id="motion-heading" className="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-heading mb-5">Capability is not authority.</h2>
+            <p className="text-[16px] text-[#b8b8c7] leading-relaxed">A conceptual view of a governed decision boundary: an incoming request, an authorization check, and a reviewable evidence record. This illustration is not a live product demonstration.</p>
+          </div>
+          <div role="img" aria-label="Conceptual governance flow: request enters policy review, then produces an evidence record" className="relative overflow-hidden rounded-2xl border border-white/15 bg-[#101121] p-6 sm:p-10 min-h-[250px] flex flex-col justify-center gap-6">
+            <div aria-hidden="true" className="absolute inset-0 opacity-30 [background-image:linear-gradient(rgba(129,140,248,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(129,140,248,0.12)_1px,transparent_1px)] [background-size:36px_36px]"/>
+            <div className="relative flex items-center justify-between gap-2">
+              {["Request","Policy review","Evidence"].map((step, i) => <div key={step} className="relative flex-1 rounded-xl border border-indigo-300/25 bg-indigo-500/10 px-2 py-6 text-center text-xs sm:text-sm text-[#eeeefe]">
+                <span aria-hidden="true" className="block mb-2 text-indigo-300">{i === 0 ? "◇" : i === 1 ? "◎" : "▣"}</span>{step}
+              </div>)}
+            </div>
+            <div aria-hidden="true" className="relative h-1 rounded-full overflow-hidden bg-white/10">
+              <div className="motion-safe:animate-pulse h-full w-1/2 rounded-full bg-indigo-400/80"/>
+            </div>
+            <p className="relative text-center text-xs text-[#b8b8c7]">Conceptual illustration · no automatic video or audio</p>
+          </div>
+        </div>
+      </section>
+
       {/* ── PLATFORM ──────────────────────────────────────────────── */}
       <section id="platform" className="relative z-[1] pt-24 border-t border-border">
         <div className="max-w-[900px] mx-auto px-6 sm:px-10">
