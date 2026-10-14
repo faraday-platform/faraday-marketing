@@ -1,3 +1,4 @@
+import GovernanceVisualComparison from "./governance-visual-comparison";
 export default function FaradayPage() {
   return (
     <main>
@@ -160,6 +161,22 @@ export default function FaradayPage() {
           </div>
         </div>
       </section>
+
+      {/* ── CURATED PROJECTS: PUBLIC SITES ONLY ──────────────────── */}
+      <section id="projects" aria-labelledby="projects-heading" className="relative z-[1] py-24 px-6 sm:px-10 border-t border-border scroll-mt-20">
+        <div className="max-w-[1200px] mx-auto">
+          <p className="font-mono text-xs text-accent tracking-widest uppercase mb-4">Beyond our four core products</p>
+          <h2 id="projects-heading" className="text-[clamp(2rem,4vw,2.75rem)] font-bold text-heading mb-5">Projects</h2>
+          <p className="text-[17px] text-[#b8b8c7] max-w-[760px] leading-relaxed mb-8">Explore additional initiatives from the Faraday ecosystem. Projects are distinct from FACP, Studio, Beacon, and PSE.</p>
+          <a href="https://musicbox.faradaycapitalsystems.com" target="_blank" rel="noopener noreferrer" className="block max-w-xl rounded-2xl border border-white/15 bg-card p-7 hover:border-accent-light focus-visible:outline-2 focus-visible:outline-accent-light">
+            <span className="font-mono text-xs text-accent-light">CREATIVE PROJECT</span>
+            <h3 className="text-xl font-semibold text-white mt-3 mb-2">Music Box ↗</h3>
+            <p className="text-sm text-[#b8b8c7] leading-relaxed">Explore the creative journey behind music, lyrics, and artist-directed experiences.</p>
+          </a>
+        </div>
+      </section>
+
+      <GovernanceVisualComparison />
 
       {/* ── PLATFORM ──────────────────────────────────────────────── */}
       <section id="platform" className="relative z-[1] pt-24 border-t border-border">

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import SiteNavigation from "./site-navigation";
 import "./globals.css";
 
 const INVESTOR_INTEREST_URL =
@@ -40,41 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
 
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-xl border-b border-border">
-          <div className="max-w-[1200px] mx-auto px-6 sm:px-10 flex items-center justify-between h-16">
-            <Link href="/" className="flex items-center gap-3">
-              <div className="w-[34px] h-[34px] rounded-lg bg-gradient-to-br from-accent to-accent-light flex items-center justify-center text-white font-bold text-xs font-mono">
-                F
-              </div>
-              <span className="font-semibold text-[17px] text-heading tracking-tight">
-                Faraday Capital Systems
-              </span>
-            </Link>
-            <div className="hidden md:flex items-center gap-6">
-              <a href="#solutions" className="text-sm font-medium text-muted hover:text-foreground transition-colors">
-                Solutions
-              </a>
-              <a href="#products" className="text-sm font-medium text-muted hover:text-foreground transition-colors">
-                Products
-              </a>
-              <a href="#platform" className="text-sm font-medium text-muted hover:text-foreground transition-colors">
-                Platform
-              </a>
-              <a
-                href={INVESTOR_INTEREST_URL}
-                className="text-sm font-medium text-accent-light hover:text-white transition-colors"
-              >
-                Investor Interest
-              </a>
-              <a
-                href="mailto:info@faradaycapitalsystems.com"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-[13px] font-semibold bg-gradient-to-br from-accent to-accent-light text-white hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(99,102,241,0.35)] transition-all"
-              >
-                Contact
-              </a>
-            </div>
-          </div>
-        </nav>
+        <SiteNavigation />
 
         {children}
 
@@ -95,7 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <div className="flex flex-col gap-2">
                   <a href="#products" className="text-[13px] text-subtle hover:text-foreground transition-colors">FACP</a>
                   <a href="https://payrollsynergyexperts.com" target="_blank" rel="noopener noreferrer" className="text-[13px] text-subtle hover:text-foreground transition-colors">PSE ↗</a>
-                  <a href="#products" className="text-[13px] text-subtle hover:text-foreground transition-colors">Studio</a>
+                  <a href="https://studio.faradaycapitalsystems.com" target="_blank" rel="noopener noreferrer" className="text-[13px] text-subtle hover:text-foreground transition-colors">Studio ↗</a>
                   <a href="#products" className="text-[13px] text-subtle hover:text-foreground transition-colors">Beacon</a>
                 </div>
               </div>
