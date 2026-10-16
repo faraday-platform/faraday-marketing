@@ -47,6 +47,43 @@ export default function FaradayPage() {
         </div>
       </section>
 
+      {/* ── V12 CINEMATIC MEDIA · REVIEW BRANCH ONLY ─────────────────────── */}
+      <section id="platform-demonstration" aria-labelledby="v12-demo-heading" className="relative z-[1] border-t border-border px-6 py-20 sm:px-10 sm:py-28">
+        <div className="mx-auto max-w-[1200px]">
+          <p className="mb-4 font-mono text-xs uppercase tracking-[0.1em] text-accent-light">
+            Conceptual demonstration · synthetic data
+          </p>
+          <h2 id="v12-demo-heading" className="mb-5 max-w-[830px] text-[clamp(2rem,4vw,2.75rem)] font-bold tracking-[-0.03em] text-heading">
+            See a governed decision from request to evidence.
+          </h2>
+          <p className="mb-9 max-w-[780px] text-[17px] leading-[1.7] text-muted">
+            Follow an illustrative request as Shield calls for human review, a separate reviewer
+            makes a decision, and the resulting evidence is inspected. This is a synthetic
+            walkthrough, not a connection to live Faraday systems.
+          </p>
+          <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#0a0e1c] shadow-[0_24px_70px_rgba(0,0,0,0.36)]">
+            <video
+              controls
+              playsInline
+              preload="none"
+              poster="/media/faraday-v12/faraday_v12_poster.jpg"
+              aria-label="38-second Faraday Platform synthetic governance demonstration"
+              className="block aspect-video w-full bg-[#0a0e1c] object-contain"
+            >
+              <source src="/media/faraday-v12/faraday_v12_website.webm" type="video/webm" />
+              <source src="/media/faraday-v12/faraday_v12_website.mp4" type="video/mp4" />
+              Your browser does not support video playback. The demonstration is described below.
+            </video>
+          </div>
+          <div className="mt-4 flex flex-col justify-between gap-3 text-sm text-muted sm:flex-row sm:items-center">
+            <p>38 seconds · Plays only when you choose · No live customer or platform data</p>
+            <a href="/faraday-v12-preview" className="font-medium text-accent-light underline underline-offset-4 hover:text-white">
+              Read the demonstration sequence
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* ── WHAT WE SOLVE ─────────────────────────────────────────── */}
       <section id="solutions" className="relative z-[1] py-28 px-6 sm:px-10 border-t border-border">
         <div className="max-w-[1200px] mx-auto">
