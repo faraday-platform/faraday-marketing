@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Faraday V12 — Media Preview",
-  description: "Review-only preview of the approved synthetic Faraday Platform demonstration.",
+  title: "Faraday V12 — Demonstration Sequence",
+  description: "Written sequence for the synthetic Faraday Platform governance demonstration.",
   robots: { index: false, follow: false },
 };
 
@@ -19,7 +19,7 @@ export default function FaradayV12MediaPreview() {
   return (
     <main className="relative z-10 mx-auto max-w-6xl px-5 pb-20 pt-36 sm:px-10">
       <p className="mb-4 font-mono text-xs uppercase tracking-widest text-indigo-300">
-        Internal visual review · conceptual demonstration · synthetic data
+        Conceptual demonstration · synthetic data
       </p>
       <h1 className="mb-4 text-3xl font-semibold text-white md:text-5xl">Faraday Platform in motion</h1>
       <p className="mb-8 max-w-3xl text-base leading-relaxed text-zinc-400">
@@ -41,8 +41,8 @@ export default function FaradayV12MediaPreview() {
         </video>
       </div>
       <p className="mt-3 text-sm text-zinc-400">
-        Play on demand; no automatic loading or motion. If motion is reduced on your device,
-        the preview remains paused until you choose Play.
+        Play on demand. The video remains paused until you choose Play,
+        including when your device requests reduced motion.
       </p>
       <section className="mt-12 max-w-4xl">
         <h2 className="mb-4 text-2xl font-semibold text-white">Accessible sequence description</h2>
@@ -50,8 +50,8 @@ export default function FaradayV12MediaPreview() {
           {transcript.map((item) => <li key={item}>{item}</li>)}
         </ol>
         <p className="mt-6 text-sm text-zinc-500">
-          Video files are pending separate transfer and visual QA. This route is only a review scaffold;
-          it must not be merged or released with missing media.
+          This written sequence describes the silent visual demonstration. All identities, requests,
+          policies, decisions, and evidence shown are synthetic.
         </p>
       </section>
     </main>
