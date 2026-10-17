@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import NavigationPreviewSwitch from "./navigation-preview/navigation-preview-switch";
 import "./globals.css";
 
 const INVESTOR_INTEREST_URL =
@@ -40,6 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
 
+        <NavigationPreviewSwitch>
         <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-xl border-b border-border">
           <div className="max-w-[1200px] mx-auto px-6 sm:px-10 flex items-center justify-between h-16">
             <Link href="/" className="flex items-center gap-3">
@@ -75,6 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </div>
         </nav>
+        </NavigationPreviewSwitch>
 
         {children}
 
