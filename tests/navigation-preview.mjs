@@ -19,7 +19,7 @@ try {
     page.on("pageerror", error => errors.push(error.message));
     for (const variant of ["compact", "directory"]) {
       await page.goto(base + "/navigation-preview/" + variant);
-      const trigger = page.getByRole("button", { name: "Open navigation menu" });
+      const trigger = page.getByRole("button", { name: /^Open .*navigation menu$/ });
       await trigger.waitFor();
       assert.equal(await trigger.getAttribute("aria-expanded"), "false");
       await trigger.focus();
@@ -41,8 +41,8 @@ try {
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
       assert.equal(await panel.evaluate(el => el.getBoundingClientRect().bottom <= innerHeight), true);
       const result = await new AxeBuilder({ page }).include('nav[aria-label="Main navigation"]').analyze();
-      assert.deepEqual(result.violations.map(v => ({ id: v.id, impact: v.impact })), [], "Navigation accessibility violations");
       await page.screenshot({ path: "test-results/navigation/" + variant + "-" + viewport.width + "x" + viewport.height + ".png" });
+      assert.deepEqual(result.violations.map(v => ({ id: v.id, impact: v.impact, nodes: v.nodes.map(n => ({ html: n.html, summary: n.failureSummary })) })), [], "Navigation accessibility violations");
       await page.keyboard.press("Escape");
       await panel.waitFor({ state: "detached" });
       assert.equal(await page.evaluate(() => document.activeElement?.id), "preview-menu-trigger");

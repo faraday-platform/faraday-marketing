@@ -68,7 +68,7 @@ function PreviewNavigation({ variant }: { variant: "compact" | "directory" }) {
     >
       <div className="mx-auto flex h-16 max-w-[1200px] items-center justify-between gap-3 px-5 sm:px-10">
         <Link href="/" className={`flex min-w-0 items-center gap-3 rounded ${focusStyle}`}>
-          <span aria-hidden="true" className="flex h-[34px] w-[34px] shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-accent to-accent-light font-mono text-xs font-bold text-white">F</span>
+          <span aria-hidden="true" className="flex h-[34px] w-[34px] shrink-0 items-center justify-center rounded-lg bg-indigo-700 font-mono text-xs font-bold text-white">F</span>
           <span className="text-[17px] font-semibold tracking-tight text-heading sm:hidden">Faraday</span>
           <span className="hidden text-[17px] font-semibold tracking-tight text-heading sm:inline">Faraday Capital Systems</span>
         </Link>
@@ -79,12 +79,12 @@ function PreviewNavigation({ variant }: { variant: "compact" | "directory" }) {
               <a href="#platform" className={`rounded text-sm text-muted hover:text-white ${focusStyle}`}>Platform</a>
             </div>
           )}
-          <a href="mailto:info@faradaycapitalsystems.com" className={`hidden rounded-lg bg-accent px-4 py-2.5 text-sm font-semibold text-white sm:inline-flex ${focusStyle}`}>Contact</a>
+          <a href="mailto:info@faradaycapitalsystems.com" className={`hidden rounded-lg bg-indigo-700 px-4 py-2.5 text-sm font-semibold text-white sm:inline-flex ${focusStyle}`}>Contact</a>
           <button
             id="preview-menu-trigger"
             ref={buttonRef}
             type="button"
-            aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+            aria-label={`${open ? "Close" : "Open"} ${variant === "compact" ? "Explore" : "Menu"} navigation menu`}
             aria-expanded={open}
             aria-controls="preview-navigation-panel"
             onClick={() => setOpen(!open)}
