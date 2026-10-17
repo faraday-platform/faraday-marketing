@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import FaradayPage from "../../page";
 
@@ -16,8 +17,8 @@ export default async function NavigationPreview({ params }: { params: Promise<{ 
         <p className="mb-3 font-mono text-xs uppercase tracking-widest text-indigo-300">Navigation preview · {variant === "compact" ? "A: Compact explore menu" : "B: Expanded directory"}</p>
         <p className="mb-3">Use the menu above to explore Products and Projects. Compare both designs on desktop and mobile.</p>
         <div className="flex flex-wrap gap-4">
-          <a href="/navigation-preview/compact" aria-current={variant === "compact" ? "page" : undefined} className="rounded underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-300">A · Compact</a>
-          <a href="/navigation-preview/directory" aria-current={variant === "directory" ? "page" : undefined} className="rounded underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-300">B · Directory</a>
+          <Link href="/navigation-preview/compact" aria-current={variant === "compact" ? "page" : undefined} className="rounded underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-300">A · Compact</Link>
+          <Link href="/navigation-preview/directory" aria-current={variant === "directory" ? "page" : undefined} className="rounded underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-300">B · Directory</Link>
         </div>
       </aside>
       <FaradayPage />

@@ -1,6 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
 const groups = [
@@ -66,11 +67,11 @@ function PreviewNavigation({ variant }: { variant: "compact" | "directory" }) {
       }}
     >
       <div className="mx-auto flex h-16 max-w-[1200px] items-center justify-between gap-3 px-5 sm:px-10">
-        <a href="/" className={`flex min-w-0 items-center gap-3 rounded ${focusStyle}`}>
+        <Link href="/" className={`flex min-w-0 items-center gap-3 rounded ${focusStyle}`}>
           <span aria-hidden="true" className="flex h-[34px] w-[34px] shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-accent to-accent-light font-mono text-xs font-bold text-white">F</span>
           <span className="text-[17px] font-semibold tracking-tight text-heading sm:hidden">Faraday</span>
           <span className="hidden text-[17px] font-semibold tracking-tight text-heading sm:inline">Faraday Capital Systems</span>
-        </a>
+        </Link>
         <div className="flex shrink-0 items-center gap-5">
           {variant === "compact" && (
             <div className="hidden items-center gap-6 lg:flex">
@@ -151,8 +152,8 @@ function PreviewNavigation({ variant }: { variant: "compact" | "directory" }) {
           <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 border-t border-white/10 pt-4 text-sm text-zinc-300">
             <a href="#solutions" onClick={() => close(true)} className={`rounded py-2 ${focusStyle}`}>Solutions</a>
             <a href="#platform" onClick={() => close(true)} className={`rounded py-2 ${focusStyle}`}>Platform</a>
-            <a href="/privacy" className={`rounded py-2 ${focusStyle}`}>Privacy</a>
-            <a href="/terms" className={`rounded py-2 ${focusStyle}`}>Terms</a>
+            <Link href="/privacy" className={`rounded py-2 ${focusStyle}`}>Privacy</Link>
+            <Link href="/terms" className={`rounded py-2 ${focusStyle}`}>Terms</Link>
           </div>
         </div>
       )}
