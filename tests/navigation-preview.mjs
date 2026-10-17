@@ -64,7 +64,7 @@ try {
       await page.locator("#preview-navigation-panel").waitFor({ state: "detached" });
       await page.locator("#preview-menu-trigger").click();
       await page.locator("#preview-navigation-panel").waitFor({ state: "visible" });
-      await page.getByRole("heading", { name: "Your systems can act faster than you can supervise them." }).click();
+      await page.mouse.click(2, 80);
       await page.locator("#preview-navigation-panel").waitFor({ state: "detached" });
       assert.deepEqual(errors, [], "Client runtime errors");
       console.log("PASS", variant, viewport.width + "x" + viewport.height);
