@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type MouseEvent } from "react";
 
 const groups = [
   { title: "Products", links: [
@@ -22,15 +22,14 @@ const groups = [
 
 const focusStyle = "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-300";
 
-export default function NavigationPreviewSwitch({ children }: { children: ReactNode }) {
+export default function SiteNavigation() {
   const pathname = usePathname();
-  if (pathname === "/navigation-preview/compact" || pathname === "/navigation-preview/directory") {
-    return <PreviewNavigation key={pathname} variant={pathname.endsWith("/compact") ? "compact" : "directory"} />;
-  }
-  return children;
+  return <PreviewNavigation key={pathname} variant={pathname === "/navigation-preview/compact" ? "compact" : "directory"} />;
 }
 
 function PreviewNavigation({ variant }: { variant: "compact" | "directory" }) {
+  const pathname = usePathname();
+  const isHomeSurface = pathname === "/" || pathname.startsWith("/navigation-preview/");
   const [open, setOpen] = useState(false);
   const navRef = useRef<HTMLElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -39,6 +38,27 @@ function PreviewNavigation({ variant }: { variant: "compact" | "directory" }) {
   function close(restoreFocus: boolean) {
     setOpen(false);
     if (restoreFocus) buttonRef.current?.focus();
+  }
+
+  function sectionHref(hash: string) {
+    return isHomeSurface ? hash : "/" + hash;
+  }
+
+  function followLink(event: MouseEvent<HTMLAnchorElement>, href: string) {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    if (href.startsWith("#") && isHomeSurface) {
+      const target = document.getElementById(href.slice(1));
+      if (target) {
+        event.preventDefault();
+        close(false);
+        target.setAttribute("tabindex", "-1");
+        target.focus({ preventScroll: true });
+        target.scrollIntoView({ behavior: "instant", block: "start" });
+        history.replaceState(null, "", href);
+        return;
+      }
+    }
+    close(true);
   }
 
   useEffect(() => {
@@ -75,8 +95,8 @@ function PreviewNavigation({ variant }: { variant: "compact" | "directory" }) {
         <div className="flex shrink-0 items-center gap-5">
           {variant === "compact" && (
             <div className="hidden items-center gap-6 lg:flex">
-              <a href="#solutions" className={`rounded text-sm text-muted hover:text-white ${focusStyle}`}>Solutions</a>
-              <a href="#platform" className={`rounded text-sm text-muted hover:text-white ${focusStyle}`}>Platform</a>
+              <a href={sectionHref("#solutions")} className={`rounded text-sm text-muted hover:text-white ${focusStyle}`}>Solutions</a>
+              <a href={sectionHref("#platform")} className={`rounded text-sm text-muted hover:text-white ${focusStyle}`}>Platform</a>
             </div>
           )}
           <a href="mailto:info@faradaycapitalsystems.com" className={`hidden rounded-lg bg-indigo-700 px-4 py-2.5 text-sm font-semibold text-white sm:inline-flex ${focusStyle}`}>Contact</a>
@@ -116,27 +136,11 @@ function PreviewNavigation({ variant }: { variant: "compact" | "directory" }) {
                     return (
                       <li key={link.label}>
                         <a
-                          href={link.href}
+                          href={link.href.startsWith("#") ? sectionHref(link.href) : link.href}
                           target={external ? "_blank" : undefined}
                           rel={external ? "noopener noreferrer" : undefined}
                           className={`flex min-h-11 items-center justify-between gap-4 rounded-lg px-3 py-2 text-base text-zinc-100 hover:bg-white/5 ${focusStyle}`}
-                          onClick={(event) => {
-                            // Keep new-tab navigation from leaving focus in a removed panel.
-                            if (external) close(true);
-                            else {
-                              close(false);
-                              if (link.href.startsWith("#") && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey) {
-                                const target = document.getElementById(link.href.slice(1));
-                                if (target) {
-                                  event.preventDefault();
-                                  target.setAttribute("tabindex", "-1");
-                                  target.focus({ preventScroll: true });
-                                  target.scrollIntoView({ behavior: "instant", block: "start" });
-                                  history.replaceState(null, "", link.href);
-                                }
-                              }
-                            }
-                          }}
+                          onClick={(event) => followLink(event, link.href)}
                         >
                           <span>{link.label}</span>
                           {external && <span aria-hidden="true">↗</span>}
@@ -150,8 +154,8 @@ function PreviewNavigation({ variant }: { variant: "compact" | "directory" }) {
             ))}
           </div>
           <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 border-t border-white/10 pt-4 text-sm text-zinc-300">
-            <a href="#solutions" onClick={() => close(true)} className={`rounded py-2 ${focusStyle}`}>Solutions</a>
-            <a href="#platform" onClick={() => close(true)} className={`rounded py-2 ${focusStyle}`}>Platform</a>
+            <a href={sectionHref("#solutions")} onClick={(event) => followLink(event, "#solutions")} className={`rounded py-2 ${focusStyle}`}>Solutions</a>
+            <a href={sectionHref("#platform")} onClick={(event) => followLink(event, "#platform")} className={`rounded py-2 ${focusStyle}`}>Platform</a>
             <Link href="/privacy" className={`rounded py-2 ${focusStyle}`}>Privacy</Link>
             <Link href="/terms" className={`rounded py-2 ${focusStyle}`}>Terms</Link>
           </div>

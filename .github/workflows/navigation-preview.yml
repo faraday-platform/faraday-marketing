@@ -5,6 +5,7 @@ on:
     paths:
       - "src/app/navigation-preview/**"
       - "src/app/layout.tsx"
+      - "src/components/site-navigation.tsx"
       - "tests/navigation-preview.mjs"
       - ".github/workflows/navigation-preview.yml"
   workflow_dispatch:

@@ -73,10 +73,18 @@ try {
       assert.deepEqual(errors, [], "Client runtime errors");
       console.log("PASS", variant, viewport.width + "x" + viewport.height);
     }
-    // Default route keeps the existing header and video, rather than enabling a preview menu.
+    // The chosen directory design is applied to the candidate homepage and legal pages.
     await page.goto(base);
-    assert.equal(await page.locator("#preview-menu-trigger").count(), 0);
+    assert.equal(await page.locator("#preview-menu-trigger").count(), 1);
+    assert.equal(await page.locator("#preview-menu-trigger").innerText(), "Menu");
     assert.equal(await page.locator("#platform-demonstration video").count(), 1);
+    await page.goto(base + "/privacy");
+    await page.locator("#preview-menu-trigger").click();
+    const legalProductLink = page.getByRole("region", { name: "Products", exact: true }).getByRole("link", { name: "FACP", exact: true });
+    assert.equal(await legalProductLink.getAttribute("href"), "/#products");
+    await legalProductLink.click();
+    await page.waitForURL(base + "/#products");
+    assert.equal(await page.locator("#products").count(), 1);
     await context.close();
   }
 } finally { await browser.close(); }
