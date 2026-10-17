@@ -1,0 +1,38 @@
+name: Navigation preview QA
+
+on:
+  pull_request:
+    paths:
+      - "src/app/navigation-preview/**"
+      - "src/app/layout.tsx"
+      - "src/components/site-navigation.tsx"
+      - "tests/navigation-preview.mjs"
+      - ".github/workflows/navigation-preview.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm install --no-save --package-lock=false playwright @axe-core/playwright
+      - run: npx playwright install --with-deps chromium
+      - run: npm run build
+      - name: Browser and navigation accessibility checks
+        run: |
+          npm run start > /tmp/navigation-preview-server.log 2>&1 &
+          node tests/navigation-preview.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: navigation-preview-screenshots
+          path: test-results/navigation/
