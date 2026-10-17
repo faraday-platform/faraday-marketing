@@ -95,7 +95,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <div className="flex flex-col gap-2">
                   <a href="#products" className="text-[13px] text-subtle hover:text-foreground transition-colors">FACP</a>
                   <a href="https://payrollsynergyexperts.com" target="_blank" rel="noopener noreferrer" className="text-[13px] text-subtle hover:text-foreground transition-colors">PSE ↗</a>
-                  <a href="#products" className="text-[13px] text-subtle hover:text-foreground transition-colors">Studio</a>
+                  <a href="https://studio.faradaycapitalsystems.com" target="_blank" rel="noopener noreferrer" className="text-[13px] text-subtle hover:text-foreground transition-colors">Studio ↗</a>
                   <a href="#products" className="text-[13px] text-subtle hover:text-foreground transition-colors">Beacon</a>
                 </div>
               </div>
