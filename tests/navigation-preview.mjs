@@ -22,6 +22,7 @@ try {
       const trigger = page.getByRole("button", { name: /^Open .*navigation menu$/ });
       await trigger.waitFor();
       assert.equal(await trigger.getAttribute("aria-expanded"), "false");
+      const baselineScrollWidth = await page.evaluate(() => document.documentElement.scrollWidth);
       await trigger.focus();
       await page.keyboard.press("Enter");
       const panel = page.locator("#preview-navigation-panel");
@@ -38,7 +39,10 @@ try {
       assert.equal(await project.getAttribute("target"), "_blank");
       assert.equal(await project.getAttribute("rel"), "noopener noreferrer");
       assert.equal(await panel.getByRole("link", { name: /Capital Access/ }).count(), 0);
-      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+      // The unchanged homepage has decorative glows outside the viewport, clipped by its body.
+      // The menu must fit the viewport and must not add horizontal overflow to that baseline.
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth) <= baselineScrollWidth, true, "Menu adds horizontal overflow");
+      assert.equal(await panel.evaluate(el => { const r = el.getBoundingClientRect(); return r.left >= 0 && r.right <= innerWidth; }), true, "Menu exceeds viewport width");
       assert.equal(await panel.evaluate(el => el.getBoundingClientRect().bottom <= innerHeight), true);
       const result = await new AxeBuilder({ page }).include('nav[aria-label="Main navigation"]').analyze();
       await page.screenshot({ path: "test-results/navigation/" + variant + "-" + viewport.width + "x" + viewport.height + ".png" });
